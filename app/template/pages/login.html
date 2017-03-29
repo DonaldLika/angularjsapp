@@ -1,0 +1,16 @@
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+<div class="myhtml">
+	<div class="logindiv">
+		<div class="login">
+					<h1>Login</h1>
+					<form role="form" name="form" ng-submit="login()" novalidate>
+								<input type="text" class="form-control input-underline input-lg" id="username" name="username" ng-model="logindata.username"  placeholder="username" required>
+								 <span ng-show="!form.username.$valid && form.username.$touched" class="help-block">Username is required</span>
+								<input type="password" class="form-control input-underline input-lg" id="password" name="password"  ng-model="logindata.password" placeholder="password" required>
+								<span ng-show="!form.password.$valid && form.password.$touched" class="help-block">Password is required</span>
+								<div ng-show="error" class="alert">Invalid Credentials</div>
+						<button type="submit" class="btn btn-white btn-outline btn-lg btn-rounded">{{ 'Login' | translate}}</button>
+					</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "AdminUnits": "Njesite Administrative",
+  "Municipalities" : "Bashkite",
+  "BuildingNumbers" : "Numri i Ndertesave",
+  "Log-out" : "Dil",
+  "Login" : "Hyr ne Portal",
+  "Delete" : "Fshi",
+  "Edit" : "Edito",
+  "Operations": "Veprime",
+  "wellcome" : "Miresevini ne Portal: ",
+  "Villages" : "Fshatrat",
+  "NoData" : "Oops, nuk eshte gjetur asnje e dhene!",
+  "choosevillage" :"Zgjidh Fshatin"
+}

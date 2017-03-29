@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Adresari Portal</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+    <link href="template/assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+    <link href="template/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="template/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Need to be edited -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    
+  </head>
+  <body ng-app="app">
+    <div class="">
+      <div ui-view></div>
+      Version <span app-version></span></div>
+    </div>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/ngtable-bower/ng-table.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/angular-translate/angular-translate.js"></script>
+    <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js" ></script>
+    <script src="../bower_components/angular-translate-storage-local/angular-translate-storage-local.js" ></script>
+    <script src="../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js" ></script>
+    <script src="../bower_components/angular-http-auth/dist/http-auth-interceptor.js" ></script>
+
+
+<!--Tests MODULES-->
+  <script src="../components/version/__version.js"></script>
+  <script src="../components/version/_version-directive.js"></script>
+  <script src="../components/version/_interpolate-filter.js"></script>
+
+  <!--    <link rel="stylesheet" href="../bower_components/angular-bootstrap/ui-bootstrap-csp.css"> -->
+<!--     <link rel="stylesheet" href="../bower_components/ngtable-bower/ng-table.min.css"></script>
+ -->
+      <!-- Modules -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/module/auth/_auth.module.js"></script>
+    <script src="scripts/module/translate/_translate.module.js"></script>
+    <script src="scripts/municipalities/_municipalities.module.js"></script>
+    <script src="scripts/administrationUnit/_adminunit.module.js"></script>
+    <script src="scripts/village/_village.module.js"></script>
+    <script src="scripts/module/preloader/_preloader.module.js"></script>
+
+    <script src="scripts/module/preloader/preloader.directive.js"></script>
+
+    <script src="scripts/administrationUnit/adminunit.provider.js"></script>
+    <script src="scripts/administrationUnit/adminunit.config.js"></script>
+    <script src="scripts/administrationUnit/adminunit.service.js"></script>
+    <script src="scripts/administrationUnit/adminunit.controller.js"></script>
+
+    <script src="scripts/module/auth/auth.service.js"></script>
+    <script src="scripts/module/auth/auth.controller.js"></script>
+
+
+    <script src="scripts/module/routes/_routes.module.js"></script>
+    <script src="scripts/module/routes/routes.config.js"></script>
+    <script src="scripts/module/routes/routes.run.js"></script>
+
+    <script src="scripts/module/translate/translate.config.js"></script>
+    <script src="scripts/module/translate/translate.run.js"></script>
+
+    <script src="scripts/municipalities/municipalities.service.js"></script>
+    <script src="scripts/municipalities/municipalities.controller.js"></script>
+    
+    <script src="scripts/village/village.service.js"></script>
+    <script src="scripts/village/village.controller.js"></script>
+    <script src="scripts/module/utils/errorManage.js"></script>
+
+ 
+  </body>
+</html>

@@ -1,0 +1,55 @@
+   <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">{{ 'AdminUnits' | translate }}</h4>
+                            </div>
+                            <div class="collapse navbar-collapse" ng-if-permission="admin">
+                                <ul class="nav navbar-nav navbar-right">
+                                  <li>
+                                 <input type="button" value="Search" class="btn btn-default" />
+                                 </li>
+                               </ul>
+                           </div>
+                        </div>
+                        <div ng-if="tableData && tableData.length == 0" class="alert alert-warning fade in">
+                           <strong>{{'NoData' | translate }}</strong>
+                        </div>
+                      
+
+                        <div ng-if="tableData && tableData.length >0">
+
+                                  <admin-unit-table />
+                                  
+                            </div>
+                    </div>
+                </div>
+
+                <script type="text/ng-template" id="promptdialog.html">
+                      <div class="modal-header">
+                        <h3 class="modal-title">Jeni te sigurt per Fshirjen?!</h3>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" ng-click="ok()">Yes</button>
+                        <button class="btn btn-warning" type="button" ng-click="cancel()">No</button>
+                      </div>
+              </script>
+
+
+              <script type="text/ng-template" id="adminunitTable.html">
+                     <table ng-table ="unitTable" class="table" show-filter="true">
+                                            <tr tablecolor elem="{{unit}}" ng-repeat="unit in $data">
+                                              <td title="'administrativeUnit'" filter="{ administrativeUnit: 'text'}" sortable="'administrativeUnit'">{{unit.administrativeUnit}}</td>
+                                              <td title="'administrativeUnitId'" filter="{ administrativeUnitId: 'number'}" sortable="'administrativeUnitId'">{{unit.administrativeUnitId}}</td>
+                                              <td title="'municipalityId'" filter="{ municipalityId: 'number'}" sortable="'municipalityId'">{{unit.municipalityId}}</td>
+                                              <td title="'Operations'">
+                                                <input type="button" value="{{ 'Delete' | translate}}" ng-click="deleteModal(unit)" class="btn btn-default" />
+                                                <input type="button" value="{{ 'Edit' | translate}}" ng-click="editModal(unit)" class="btn btn-default"/>
+                                              </td>
+                                            </tr>
+                                    </table>
+              </script>
+
+
+</div>

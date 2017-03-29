@@ -1,0 +1,14 @@
+{
+  "AdminUnits": "Administration Units",
+  "Municipalities" : "Municipalities",
+  "BuildingNumbers" : "Building Numbers",
+  "Log-out" : "Log-out",
+  "Login" : "Login to Portal",
+  "Delete" : "Delete",
+  "Edit" : "Edit",
+  "Operations": "Operations",
+  "wellcome" : "Wellcome to Portal: ",
+  "Villages" : "Villages",
+  "NoData" : "Oops, no record found!",
+  "choosevillage": "Choose Village"
+}

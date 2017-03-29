@@ -1,0 +1,48 @@
+   <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">{{'Villages' | translate}}</h4>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                           <!--  <input ng-model="filterSearch.buildingNumber" /> -->
+                           <div class="collapse navbar-collapse">
+                               <ul class="nav navbar-nav navbar-right">
+                                 <li>
+                                <input ng-model="filterSearch.streetId" />
+                                <input type="button" value="Search" class="btn btn-default" />
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="dropdown" >
+                                <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    {{ 'choosevillage' | translate }}
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li ng-repeat="city in dropDownCities">
+                                        <a ng-click="setSelected(city)">{{city.cityVillage | uppercase}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>{{cityVillage.cityVillage}}</p>
+                       </div>
+                        <div ng-if="cities && cities.length == 0" class="alert alert-warning fade in">
+                           <strong>{{'NoData' | translate }}</strong>
+                        </div>
+                        <div ng-if="cities && cities.length >0">
+                        <table  ng-table ="citiesTable" class="table" show-filter="true" >
+                                   <tr ng-repeat="unit in $data">
+                                     <td title="'cityVillageId'" filter="{ cityVillageId: 'number'}" sortable="'cityVillageId'">{{unit.cityVillageId}}</td>
+                                     <td title="'postalCode'" filter="{ postalCode: 'text'}" sortable="'postalCode'">{{unit.postalCode}}</td>
+                                     <td title="'postalCodeId'" filter="{ postalCodeId: 'number'}" sortable="'postalCodeId'">{{unit.postalCodeId}}</td>
+                                   </tr>
+                         </table>
+                         </div>
+                    </div>
+                </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="blue">
+      <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.ikubinfo.al" class="simple-text">
+                    IKUBINFO
+                </a>
+            </div>
+           <ul class="nav">
+                <li >
+                    <a href="/#!/dashboard/main">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#!/dashboard/adminunits">
+                        <i class="pe-7s-user"></i>
+                        <p>{{ 'AdminUnits' | translate }}</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#!/dashboard/municipalities">
+                        <i class="pe-7s-user"></i>
+                        <p>{{ 'Municipalities' | translate}}</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#!/dashboard/buildings">
+                        <i class="pe-7s-user"></i>
+                        <p>{{'Villages' | translate}}</p>
+                    </a>
+                </li>
+            </ul>
+      </div>
+    </div>
+
+    <div class="main-panel">
+    <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">{{ 'wellcome' | translate}} {{userInfo.userName | uppercase}}</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                          <div  is-open="language.listIsOpen" class="dropdown" >
+                              <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  {{language.selected}}
+                                  <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                  <li ng-repeat="(localeId, langName) in language.available">
+                                      <a ng-click="language.set(localeId, $event)">{{langName}}</a>
+                                  </li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-default" ng-click="logout()" >
+                                {{ 'Log-out' | translate }}
+                            </button>
+                        </li>
+            <li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div app-preloader></div>
+        <footer class="footer">
+                <p class="copyright pull-right">
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
