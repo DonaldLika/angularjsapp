@@ -1,12 +1,10 @@
-# `angular-seed` — the seed for AngularJS apps
+# Angular Js Portal
 
-This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
-to quickly bootstrap your angular webapp projects and dev environment for these projects.
+This Project is a Test Demo AngularJs Application
 
 ## Getting Started
 
-To get you started you can simply clone the `AngularJsProject` repository and install the dependencies:
-
+To get you started you can simply clone the `angularjsapp` repository and install the dependencies:
 
 ### Run the Application
 
